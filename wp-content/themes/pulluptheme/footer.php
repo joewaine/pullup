@@ -4,15 +4,14 @@
 
 
 
-    <footer class="footer">
-    <div class="footer-links">
-      <a href="#privacy-policy">Privacy Policy</a> |
-      <a href="#terms-of-service">Terms of Service</a> |
-      <a href="#contact-us">Contact Us</a>
+
+
+
+  <footer>
+    <div class="container">
+      <p>&copy; 2025 Record Label. All Rights Reserved.</p>
     </div>
   </footer>
-
-
 
 
     <?php wp_footer(); // Hook for scripts, etc. ?>
