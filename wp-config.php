@@ -19,6 +19,25 @@
  * @package WordPress
  */
 
+
+
+//  Vg&uWkSjuR26IYG9MZ
+
+// Check if the site is running locally (you can change 'localhost' to match your local environment)
+if (strpos($_SERVER['HTTP_HOST'], 'localhost') !== false || strpos($_SERVER['HTTP_HOST'], '127.0.0.1') !== false) {
+    // Local development settings
+    define( 'DB_NAME', 'pullup' );  // The database name you created in phpMyAdmin
+    define( 'DB_USER', 'root' );           // MAMP default username
+    define( 'DB_PASSWORD', 'root' );       // MAMP default password
+    define( 'DB_HOST', 'localhost' );     // Localhost
+} else {
+    // // Production settings (set your live database details here)
+    // define( 'DB_NAME', 'production_db_name' );
+    // define( 'DB_USER', 'production_user' );
+    // define( 'DB_PASSWORD', 'production_password' );
+    // define( 'DB_HOST', 'production_host' ); // E.g., 'localhost' or an IP address for live server
+
+
 // ** Database settings - You can get this info from your web host ** //
 /** The name of the database for WordPress */
 define( 'DB_NAME', 'db8yiideq31q8i' );
@@ -37,6 +56,17 @@ define( 'DB_CHARSET', 'utf8' );
 
 /** The database collate type. Don't change this if in doubt. */
 define( 'DB_COLLATE', '' );
+
+
+
+}
+
+
+
+
+
+
+
 
 /**#@+
  * Authentication unique keys and salts.
