@@ -2,6 +2,8 @@
 // Enqueue stylesheets and scripts
 function my_blank_theme_enqueue_styles() {
     wp_enqueue_style( 'my-blank-theme-style', get_stylesheet_uri() );
+
+
 }
 
 add_action( 'wp_enqueue_scripts', 'my_blank_theme_enqueue_styles' );
@@ -32,3 +34,5 @@ function register_artist_post_type() {
     ));
 }
 add_action('init', 'register_artist_post_type');
+
+

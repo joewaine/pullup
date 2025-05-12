@@ -15,6 +15,24 @@
 
 
     <?php wp_footer(); // Hook for scripts, etc. ?>
+
+
+    <script>
+
+
+
+// Toggle the mobile menu when the burger icon is clicked
+const mobileMenu = document.getElementById("mobile-menu");
+const navLinks = document.getElementById("nav-links");
+
+mobileMenu.addEventListener("click", () => {
+    navLinks.classList.toggle("active");
+    // alert("done");
+});
+
+    </script>
+
+
 </body>
 </html>
 

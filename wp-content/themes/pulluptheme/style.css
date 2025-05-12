@@ -22,13 +22,15 @@ Text Domain: my-blank-theme
   }
   
   body {
-    font-family: Arial, sans-serif;
+    /* font-family: 'Courier New', Courier, monospace; */
+    font-family: 'Courier New', Courier, monospace;
     background-color: #fff;
+    background-color:
     color: #333;
   }
   
   header {
-    background-color: #000;
+    background-color: #fff;
     color: #fff;
     padding: 20px 0;
     text-align: center;
@@ -51,7 +53,7 @@ Text Domain: my-blank-theme
   header nav ul li a {
     color: #fff;
     text-decoration: none;
-    font-weight: bold;
+    font-weight: 100;
   }
   
   header nav ul li a:hover {
@@ -76,7 +78,7 @@ Text Domain: my-blank-theme
   h2 {
     font-size: 2.5em;
     margin-bottom: 20px;
-    text-align: center;
+    /* text-align: center; */
   }
   
   .artist-grid, .release-grid {
@@ -117,3 +119,220 @@ Text Domain: my-blank-theme
     text-decoration: underline;
   }
   
+
+  /* Reset some basic styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+
+/* The container holds the row */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* The row holds columns and defines flexbox behavior */
+.row {
+  display: flex;
+  flex-wrap: wrap;  /* Wraps columns onto new lines */
+  gap: 20px;
+}
+
+/* The column is responsible for layout structure */
+.col {
+  /* background-color: #4CAF50; */
+  padding: 20px;
+  color: white;
+  /* text-align: center; */
+  border-radius: 5px;
+  margin-bottom: 20px; /* Space at the bottom of each column */
+}
+
+/* Base responsive behavior: 100% width for small screens */
+.col-12 {
+  flex: 0 0 100%; /* 100% width on small screens */
+}
+
+/* Medium screens (tablets) - 50% width for each column */
+@media (min-width: 768px) {
+  .col-md-6 {
+      flex: 0 0 50%; /* 50% width on medium screens */
+  }
+}
+
+/* Large screens (desktops) - 33.33% width for each column */
+@media (min-width: 992px) {
+  .col-lg-4 {
+      flex: 0 0 33.33%; /* 33.33% width on large screens */
+  }
+}
+
+/* Optional: Add a bit of styling to the text inside */
+.col h3 {
+  margin-top: 10px;
+}
+
+/* Reset some basic styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+/* The container holds the row */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* The row holds columns and defines flexbox behavior */
+.row {
+  display: flex;
+  flex-wrap: wrap;  /* Wraps columns onto new lines */
+  gap: 20px;
+}
+
+/* The column is responsible for layout structure */
+.col {
+  /* background-color: #4CAF50; */
+  padding: 20px;
+  color: #000000;
+  text-align: center;
+  border-radius: 5px;
+  margin-bottom: 20px; /* Space at the bottom of each column */
+}
+
+/* Base responsive behavior: 100% width for small screens */
+.col-12 {
+  flex: 0 0 100%; /* 100% width on small screens */
+}
+
+/* Medium screens (tablets) - 50% width for each column */
+@media (min-width: 768px) {
+  .col-md-6 {
+      flex: 0 0 50%; /* 50% width on medium screens */
+  }
+}
+
+/* Large screens (desktops) - 33.33% width for each column */
+@media (min-width: 992px) {
+  .col-lg-4 {
+      flex: 0 0 33.33%; /* 33.33% width on large screens */
+  }
+}
+
+/* Optional: Add a bit of styling to the text inside */
+.col h3 {
+  margin-top: 10px;
+}
+
+
+
+/* Basic reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Body styling */
+body {
+  font-family: 'Courier New', Courier, monospace;
+  background-color: #ffffff;
+  margin: 0;
+  padding: 20px;
+  line-height: 1.6;
+}
+
+
+/* Navbar styling */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #FFF;
+  padding: 15px 20px;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.navbar .logo a {
+  color: #fff;
+  font-size: 24px;
+  text-decoration: none;
+}
+
+/* Hide menu by default on mobile */
+.nav-links {
+  display: flex;
+  list-style: none;
+}
+
+.nav-links li {
+  margin-left: 20px;
+}
+
+.nav-links a {
+  color: #000;
+  text-decoration: none;
+  font-size: 18px;
+  padding: 10px;
+  display: inline-block;
+}
+
+.nav-links a:hover {
+  /* background-color: #555; */
+  border-radius: 4px;
+}
+
+/* Menu toggle button (hamburger) */
+.menu-toggle {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+}
+
+.menu-toggle .bar {
+  width: 25px;
+  height: 4px;
+  background-color: #000;
+  margin: 4px 0;
+}
+
+/* Responsive Design (Mobile view) */
+@media (max-width: 768px) {
+  .nav-links {
+      display: none;
+      width: 100%;
+      flex-direction: column;
+      align-items: center;
+      position: absolute;
+      top: 60px; /* Adjust if needed */
+      left: 0;
+      background-color: #fff;
+      z-index: 999;
+  }
+
+  .nav-links.active {
+      display: flex;
+  }
+
+  .nav-links li {
+      margin: 15px 0;
+  }
+
+  .menu-toggle {
+      display: flex;
+  }
+}
+
+
+h1{
+  font-weight: 100;
+}
