@@ -39,7 +39,7 @@ if ( is_page() ) {
             $image = get_field('artist_image'); // Image (url)
     
             if ($image) {
-                echo '<img src="' . esc_url($image) . '" alt="' . esc_attr(get_the_title()) . '">';
+                echo '<img class="artist-image-thumb" src="' . esc_url($image) . '" alt="' . esc_attr(get_the_title()) . '">';
             }
 ?>
 
