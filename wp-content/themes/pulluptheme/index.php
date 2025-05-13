@@ -6,90 +6,74 @@ get_header(); // Includes the header.php template
 ?>
 <main>
 
+
+
+
+
+
+
+
+
+
+
+
+<div class="content-area">
+    <div class="container">
+    <div class="row">
+
 <?php
 if ( is_page() ) {
-    // This is a page (any page)
-    ?>
-page
-    <?php
+
 }else{
 
     if ( have_posts() ) : 
         while ( have_posts() ) : the_post();
             // Display the content of the post.
-            the_content();
-    ?>
+?>            
+            <div class="col col-12 col-md-6 col-lg-4">
+            <?php
+            the_field('artist_name');       // Text field
+            the_field('artist_bio');        // Text area
+            $url = get_field('artist_slug');
+            $text = get_field('artist_name');
+            $image = get_field('artist_image'); // Image (url)
     
-    <section id="home">
-      <h1>Welcome to Our Website</h1>
-      <p>This is a sample landing page with a fixed header and a responsive footer.</p>
-    </section>
+            if ($image) {
+                echo '<img src="' . esc_url($image) . '" alt="' . esc_attr(get_the_title()) . '">';
+            }
+?>
 
 
-    <?php
-        endwhile;
-    else :
-        echo 'No posts found';
-    endif;
+
+        <a href="/artists/<?php echo esc_url($url); ?>">
+                        <?php echo esc_html($text); ?>
+                    </a>
+
+  
+</div>
     
+<?php
 
+endwhile;
+endif;
 }
 ?>
+    
+
+
+</div></div></div>
+
+    <!-- <section id="home">
+      <h1>Welcome to Our Website</h1>
+      <p>This is a sample landing page with a fixed header and a responsive footer.</p>
+    </section> -->
+
 
 
 
 </main>
 
 
-<section id="about" class="section">
-    <div class="container">
-      <h2>About Us</h2>
-      <p>We are an independent record label focused on discovering new and exciting talent in the music world.</p>
-    </div>
-  </section>
-
-  <section id="artists" class="section">
-    <div class="container">
-      <h2>Our Artists</h2>
-      <div class="artist-grid">
-        <div class="artist">
-          <img src="artist1.jpg" alt="Artist 1">
-          <h3>Artist Name</h3>
-        </div>
-        <div class="artist">
-          <img src="artist2.jpg" alt="Artist 2">
-          <h3>Artist Name</h3>
-        </div>
-        <!-- Add more artists here -->
-      </div>
-    </div>
-  </section>
-
-  <section id="releases" class="section">
-    <div class="container">
-      <h2>Latest Releases</h2>
-      <div class="release-grid">
-        <div class="release">
-          <img src="album1.jpg" alt="Album 1">
-          <h3>Album Name</h3>
-          <p>Release Date: January 1, 2025</p>
-        </div>
-        <div class="release">
-          <img src="album2.jpg" alt="Album 2">
-          <h3>Album Name</h3>
-          <p>Release Date: February 15, 2025</p>
-        </div>
-        <!-- Add more releases here -->
-      </div>
-    </div>
-  </section>
-
-  <section id="contact" class="section">
-    <div class="container">
-      <h2>Contact</h2>
-      <p>For inquiries, collaborations, and press, please reach out via email: <a href="mailto:contact@recordlabel.com">contact@recordlabel.com</a></p>
-    </div>
-  </section>
 
 
 

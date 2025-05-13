@@ -9,6 +9,8 @@ get_header(); // Includes the header.php template
 
 <div class="container">    <div class="container">
 <div class="row">
+
+
     <h1><?php the_title(); ?></h1>
     </div>  </div>
     <div class="content-area">

@@ -12,13 +12,7 @@
     <div class="container">
     
 <nav class="navbar">
-<?php
-// Example: Display a global field called 'site_tagline'
-$tagline = get_field('site_tagline', 'option');
-if ($tagline) {
-    echo '<p class="site-tagline">' . esc_html($tagline) . '</p>';
-}
-?>
+
     <div class="logo">
     
         <a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
@@ -32,10 +26,10 @@ if ($tagline) {
         <span class="bar"></span>
         <span class="bar"></span>
     </div>
-
+    <!-- <h1 style="color:black">sss</h1> -->
     <?php if (have_rows('navigation_links', 'option')) : ?>
-      <div class="menu-toggle" id="mobile-menu">
-        <nav>
+      <!-- <div class="menu-toggle" id="mobile-menu"> -->
+        <!-- <nav> -->
     <ul class="nav-links" id="nav-links">
             <?php while (have_rows('navigation_links', 'option')) : the_row(); 
                 $text = get_sub_field('link_text');
@@ -48,8 +42,8 @@ if ($tagline) {
                 </li>
             <?php endwhile; ?>
         </ul>
-    </nav>
-    </div>
+    <!-- </nav> -->
+    <!-- </div> -->
 <?php endif; ?>
 
 
