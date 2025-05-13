@@ -9,7 +9,7 @@
 
   <footer>
     <div class="container">
-      <p>&copy; 2025 Record Label. All Rights Reserved.</p>
+      <p>&copy; 2025 Pullup Recs. All Rights Reserved.</p>
     </div>
   </footer>
 
