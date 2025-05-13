@@ -32,8 +32,8 @@ if ( is_page() ) {
 ?>            
             <div class="col col-12 col-md-6 col-lg-4">
             <?php
-            the_field('artist_name');       // Text field
-            the_field('artist_bio');        // Text area
+            // the_field('artist_name');       // Text field
+            // the_field('artist_bio');        // Text area
             $url = get_field('artist_slug');
             $text = get_field('artist_name');
             $image = get_field('artist_image'); // Image (url)
