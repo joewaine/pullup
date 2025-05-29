@@ -337,7 +337,37 @@ h1{
   font-weight: 100;
 }
 
+.artist-bio, .artist-name{
+font-family: 'Montserrat', sans-serif;
+}
+
+.artist-bio{
+ font-weight:100;
+ }
+
+
+.artist-name{
+  font-weight:900;
+  }
+ 
+
+
+.artist-left-column{
+  text-align: left;
+}
 
 .artist-image-thumb{
   width: 100% !important;
+}
+
+.artist-links{
+  margin-top: 10px;
+  padding-left: 0; /* Remove default padding from ul */
+  list-style: none; /* Optional: Remove bullets */
+}
+
+.artist-links li{
+  display: inline;
+  margin-right:20px;
+  margin-left: 0; /* Ensure no left margin */
 }
