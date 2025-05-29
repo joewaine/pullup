@@ -105,6 +105,35 @@ if ($artist_bio) {
 </div>
 </div>
 
+
+
+<!-- PRODUCTS -->
+<div class="container">
+
+<div class="row">
+
+
+<?php if( have_rows('products') ): ?>
+    <div class="acf-products">
+        <?php while( have_rows('products') ): the_row(); 
+            $product = get_sub_field('product'); // Either Post Object or ID
+            $product_id = is_object($product) ? $product->ID : $product;
+        ?>
+            <div class="acf-product">
+                <?php echo do_shortcode('[product id="' . $product_id . '"]'); ?>
+            </div>
+        <?php endwhile; ?>
+    </div>
+<?php endif; ?>
+
+
+
+</div>
+</div>
+
+
+
+
 </main>
 
 <?php get_footer(); ?>
