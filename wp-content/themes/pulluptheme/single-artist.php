@@ -92,7 +92,7 @@ if (have_rows('links')) {
 ?>
 </div>
 <div class="col col-6 col-md-12 col-lg-6">
-<div class="arist-bio">
+<div class="artist-bio">
 <?php
 if ($artist_bio) {
   echo '<p>' . esc_html($artist_bio) . '</p>';
