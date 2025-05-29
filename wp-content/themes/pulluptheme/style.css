@@ -337,9 +337,6 @@ h1{
   font-weight: 100;
 }
 
-.artist-bio, .artist-name{
-font-family: 'Montserrat', sans-serif;
-}
 
 .artist-bio{
  font-weight:100;
@@ -371,3 +368,38 @@ font-family: 'Montserrat', sans-serif;
   margin-right:20px;
   margin-left: 0; /* Ensure no left margin */
 }
+
+
+
+.artist-name{
+  text-transform: uppercase;
+}
+
+.artist-bio, .artist-name{
+  font-family: 'Montserrat', sans-serif;
+  }
+  
+  .arist-bio p{
+    font-family: 'Montserrat', sans-serif;
+    font-weight:300;
+  }
+
+
+
+  .owl-prev{
+    position: absolute;
+    top: 50%;
+    background: white !important;
+    width: 26px;
+  }
+
+
+  .owl-next{
+    position: absolute;
+    top: 50%;
+    background: white !important;
+    right:0;
+    width: 26px;
+
+  }
+

@@ -33,6 +33,23 @@ mobileMenu.addEventListener("click", () => {
     </script>
 
 
+<script>
+
+$(document).ready(function(){
+  $(".owl-carousel").owlCarousel({
+    items: 1,              // Number of items per slide
+    loop: true,            // Infinite loop
+    margin: 10,            // Space between items
+    nav: true,             // Show next/prev buttons
+    autoplay: true,        // Enable auto play
+    autoplayTimeout: 3000, // Auto play interval
+    dots: true             // Show dot indicators
+  });
+});
+
+</script>
+
+
 </body>
 </html>
 

@@ -23,13 +23,43 @@ $artist_bio = get_field('artist_bio');
 <br>
 <?php
 // Artist Image (Image URL)
-$artist_image = get_field('artist_image');
-if ($artist_image) {
-    echo '<img src="' . esc_url($artist_image) . '" alt="' . esc_attr($artist_name) . '" />';
-}
+//$artist_image = get_field('artist_image');
+//if ($artist_image) {
+  //  echo '<img src="' . esc_url($artist_image) . '" alt="' . esc_attr($artist_name) . '" />';
+//}
 ?>
 </div>
 </div>
+
+
+<div class="container">
+  <div class="row">
+
+  <!-- <div class="owl-carousel">
+  <div class="item"><img src="image1.jpg" alt="Image 1"></div>
+  <div class="item"><img src="image2.jpg" alt="Image 2"></div>
+  <div class="item"><img src="image3.jpg" alt="Image 3"></div> -->
+
+
+  <?php if (have_rows('image_gallery')) : ?>
+  <div class="owl-carousel">
+    <?php while (have_rows('image_gallery')) : the_row();
+      $image = get_sub_field('gallery_image');
+      if ($image) : ?>
+        <div class="item">
+          <img src="<?php echo esc_url($image['url']); ?>" alt="<?php echo esc_attr($image['alt']); ?>">
+        </div>
+      <?php endif;
+    endwhile; ?>
+  </div>
+<?php endif; ?>
+
+
+
+
+</div>
+</div>
+
 <div class="container">
 
 <div class="row">
@@ -37,7 +67,7 @@ if ($artist_image) {
   <?php
   // <!-- // Artist Name -->
 if ($artist_name) {
-    echo '<h2 class="arist-name">' . esc_html($artist_name) . '</h2>';
+    echo '<h2 class="artist-name">' . esc_html($artist_name) . '</h2>';
 }
 
 
