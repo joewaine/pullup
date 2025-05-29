@@ -403,3 +403,32 @@ h1{
 
   }
 
+
+
+  /* commerce */
+  .custom-product-wrapper {
+    margin-top: 40px;
+}
+
+.product-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+}
+
+.product-image {
+    flex: 1 1 45%;
+}
+
+.product-summary {
+    flex: 1 1 45%;
+}
+
+.product-title {
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+.product-extras {
+    margin-top: 60px;
+}
