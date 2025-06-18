@@ -361,6 +361,7 @@ h1{
 
 .artist-name{
   text-transform: uppercase;
+  line-height: 1;
 }
 
 .artist-bio, .artist-name{
