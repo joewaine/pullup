@@ -432,3 +432,8 @@ h1{
 .product-extras {
     margin-top: 60px;
 }
+
+
+.woocommerce .products li{
+  width: 100%;
+}
