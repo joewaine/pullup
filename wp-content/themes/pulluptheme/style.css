@@ -426,3 +426,7 @@ h1{
 .woocommerce .products li{
   width: 100% !important;
 }
+
+.woocommerce-loop-product__title{
+  font-family: 'Montserrat', sans-serif;
+}
