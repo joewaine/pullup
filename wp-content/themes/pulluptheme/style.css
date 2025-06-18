@@ -435,5 +435,5 @@ h1{
 
 
 .woocommerce .products li{
-  width: 100%;
+  width: 100% !important;
 }
