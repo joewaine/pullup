@@ -91,7 +91,7 @@ if (have_rows('links')) {
 }
 ?>
 </div>
-<div class="col col-8 col-md-8 col-lg-8">
+<div class="col col-7 col-md-7 col-lg-7">
 <div class="artist-bio">
 <?php
 if ($artist_bio) {
