@@ -63,7 +63,7 @@ $artist_bio = get_field('artist_bio');
 <div class="container">
 
 <div class="row">
-<div class="col col-6 col-md-12 col-lg-6 artist-left-column">
+<div class="col col-4 col-md-4 col-lg-4 artist-left-column">
   <?php
   // <!-- // Artist Name -->
 if ($artist_name) {
@@ -91,7 +91,7 @@ if (have_rows('links')) {
 }
 ?>
 </div>
-<div class="col col-6 col-md-12 col-lg-6">
+<div class="col col-8 col-md-8 col-lg-8">
 <div class="artist-bio">
 <?php
 if ($artist_bio) {

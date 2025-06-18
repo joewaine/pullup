@@ -21,14 +21,16 @@ Text Domain: my-blank-theme
     box-sizing: border-box;
   }
   
-  body {
-    /* font-family: 'Courier New', Courier, monospace; */
-    font-family: 'Courier New', Courier, monospace;
-    background-color: #fff;
-    background-color:
-    color: #333;
-  }
-  
+  /* Body styling */
+body {
+  font-family: 'Courier New', Courier, monospace;
+  background-color: #ffffff;
+  margin: 0;
+  padding: 20px;
+  line-height: 1.6;
+}
+
+
   header {
     background-color: #fff;
     color: #fff;
@@ -120,20 +122,10 @@ Text Domain: my-blank-theme
   }
   
 
-  /* Reset some basic styles */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
 
 
 
-/* The container holds the row */
-.container {
-  max-width: 1200px;
-  margin: 0 auto;
-}
+
 
 /* The row holds columns and defines flexbox behavior */
 .row {
@@ -152,102 +144,97 @@ Text Domain: my-blank-theme
   margin-bottom: 20px; /* Space at the bottom of each column */
 }
 
-/* Base responsive behavior: 100% width for small screens */
-.col-12 {
-  flex: 0 0 100%; /* 100% width on small screens */
+/* Extra Small (default) */
+.col-1  { flex: 0 0 8.33%; }
+.col-2  { flex: 0 0 16.66%; }
+.col-3  { flex: 0 0 25%; }
+.col-4  { flex: 0 0 33.33%; }
+.col-5  { flex: 0 0 41.66%; }
+.col-6  { flex: 0 0 50%; }
+.col-7  { flex: 0 0 58.33%; }
+.col-8  { flex: 0 0 66.66%; }
+.col-9  { flex: 0 0 75%; }
+.col-10 { flex: 0 0 83.33%; }
+.col-11 { flex: 0 0 91.66%; }
+.col-12 { flex: 0 0 100%; }
+
+
+/* Small screens ≥576px */
+@media (min-width: 576px) {
+  .col-sm-1  { flex: 0 0 8.33%; }
+  .col-sm-2  { flex: 0 0 16.66%; }
+  .col-sm-3  { flex: 0 0 25%; }
+  .col-sm-4  { flex: 0 0 33.33%; }
+  .col-sm-5  { flex: 0 0 41.66%; }
+  .col-sm-6  { flex: 0 0 50%; }
+  .col-sm-7  { flex: 0 0 58.33%; }
+  .col-sm-8  { flex: 0 0 66.66%; }
+  .col-sm-9  { flex: 0 0 75%; }
+  .col-sm-10 { flex: 0 0 83.33%; }
+  .col-sm-11 { flex: 0 0 91.66%; }
+  .col-sm-12 { flex: 0 0 100%; }
 }
 
-/* Medium screens (tablets) - 50% width for each column */
+/* Medium screens ≥768px */
 @media (min-width: 768px) {
-  .col-md-6 {
-      flex: 0 0 50%; /* 50% width on medium screens */
-  }
+  .col-md-1  { flex: 0 0 8.33%; }
+  .col-md-2  { flex: 0 0 16.66%; }
+  .col-md-3  { flex: 0 0 25%; }
+  .col-md-4  { flex: 0 0 33.33%; }
+  .col-md-5  { flex: 0 0 41.66%; }
+  .col-md-6  { flex: 0 0 50%; }
+  .col-md-7  { flex: 0 0 58.33%; }
+  .col-md-8  { flex: 0 0 66.66%; }
+  .col-md-9  { flex: 0 0 75%; }
+  .col-md-10 { flex: 0 0 83.33%; }
+  .col-md-11 { flex: 0 0 91.66%; }
+  .col-md-12 { flex: 0 0 100%; }
 }
 
-/* Large screens (desktops) - 33.33% width for each column */
+/* Large screens ≥992px */
 @media (min-width: 992px) {
-  .col-lg-4 {
-      flex: 0 0 33.33%; /* 33.33% width on large screens */
-  }
+  .col-lg-1  { flex: 0 0 8.33%; }
+  .col-lg-2  { flex: 0 0 16.66%; }
+  .col-lg-3  { flex: 0 0 25%; }
+  .col-lg-4  { flex: 0 0 33.33%; }
+  .col-lg-5  { flex: 0 0 41.66%; }
+  .col-lg-6  { flex: 0 0 50%; }
+  .col-lg-7  { flex: 0 0 58.33%; }
+  .col-lg-8  { flex: 0 0 66.66%; }
+  .col-lg-9  { flex: 0 0 75%; }
+  .col-lg-10 { flex: 0 0 83.33%; }
+  .col-lg-11 { flex: 0 0 91.66%; }
+  .col-lg-12 { flex: 0 0 100%; }
 }
+
+/* Extra large screens ≥1200px */
+@media (min-width: 1200px) {
+  .col-xl-1  { flex: 0 0 8.33%; }
+  .col-xl-2  { flex: 0 0 16.66%; }
+  .col-xl-3  { flex: 0 0 25%; }
+  .col-xl-4  { flex: 0 0 33.33%; }
+  .col-xl-5  { flex: 0 0 41.66%; }
+  .col-xl-6  { flex: 0 0 50%; }
+  .col-xl-7  { flex: 0 0 58.33%; }
+  .col-xl-8  { flex: 0 0 66.66%; }
+  .col-xl-9  { flex: 0 0 75%; }
+  .col-xl-10 { flex: 0 0 83.33%; }
+  .col-xl-11 { flex: 0 0 91.66%; }
+  .col-xl-12 { flex: 0 0 100%; }
+}
+
+
+
+[class*="col-"] {
+  min-width: 0;
+}
+
 
 /* Optional: Add a bit of styling to the text inside */
 .col h3 {
   margin-top: 10px;
 }
 
-/* Reset some basic styles */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-
-/* The container holds the row */
-.container {
-  max-width: 1200px;
-  margin: 0 auto;
-}
-
-/* The row holds columns and defines flexbox behavior */
-.row {
-  display: flex;
-  flex-wrap: wrap;  /* Wraps columns onto new lines */
-  gap: 20px;
-}
-
-/* The column is responsible for layout structure */
-.col {
-  /* background-color: #4CAF50; */
-  padding: 20px;
-  color: #000000;
-  text-align: center;
-  border-radius: 5px;
-  margin-bottom: 20px; /* Space at the bottom of each column */
-}
-
-/* Base responsive behavior: 100% width for small screens */
-.col-12 {
-  flex: 0 0 100%; /* 100% width on small screens */
-}
-
-/* Medium screens (tablets) - 50% width for each column */
-@media (min-width: 768px) {
-  .col-md-6 {
-      flex: 0 0 50%; /* 50% width on medium screens */
-  }
-}
-
-/* Large screens (desktops) - 33.33% width for each column */
-@media (min-width: 992px) {
-  .col-lg-4 {
-      flex: 0 0 33.33%; /* 33.33% width on large screens */
-  }
-}
-
-/* Optional: Add a bit of styling to the text inside */
-.col h3 {
-  margin-top: 10px;
-}
-
-
-
-/* Basic reset */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-/* Body styling */
-body {
-  font-family: 'Courier New', Courier, monospace;
-  background-color: #ffffff;
-  margin: 0;
-  padding: 20px;
-  line-height: 1.6;
-}
 
 
 /* Navbar styling */
@@ -382,6 +369,7 @@ h1{
   .artist-bio p{
     font-family: 'Montserrat', sans-serif;
     font-weight:300;
+    text-align: left;
   }
 
 
